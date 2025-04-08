@@ -1,1 +1,3 @@
 https://leetcode-in-java.github.io/
+https://github.com/gouthampradhan/leetcode
+https://leetcode.ca/all/problems.html
