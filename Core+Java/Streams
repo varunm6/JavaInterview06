@@ -1,0 +1,228 @@
+---
+
+Beginner Level
+
+1. What is Stream API?
+
+Streams in Java are a way to process collections (like List, Set) in a functional and declarative way. Stream operations are lazy, meaning computation is only performed when needed.
+
+
+---
+
+2. Creating a Stream
+
+From a Collection:
+
+List<String> names = List.of("John", "Jane", "Jack");
+Stream<String> stream = names.stream();
+
+From Arrays:
+
+String[] array = {"A", "B", "C"};
+Stream<String> stream = Arrays.stream(array);
+
+
+---
+
+3. forEach() – Terminal operation
+
+Used to iterate over elements of a stream.
+
+names.stream().forEach(name -> System.out.println(name));
+
+Note: forEach should be used for side effects like logging, not for transformation.
+
+
+---
+
+4. map() – Transform elements
+
+map() is used to transform each element using a function.
+
+List<Integer> numbers = List.of(1, 2, 3, 4);
+List<Integer> squares = numbers.stream()
+                               .map(n -> n * n)
+                               .collect(Collectors.toList());
+
+
+---
+
+5. filter() – Select elements based on condition
+
+Returns a stream with elements that match a given predicate.
+
+List<String> filtered = names.stream()
+                             .filter(name -> name.startsWith("J"))
+                             .collect(Collectors.toList());
+
+
+---
+
+6. collect() – Terminal operation
+
+Collects the stream elements into a Collection, List, Set, or even a Map.
+
+List<String> upper = names.stream()
+                          .map(String::toUpperCase)
+                          .collect(Collectors.toList());
+
+
+---
+
+Intermediate Level
+
+7. sorted() – Sorting elements
+
+By default, it sorts based on natural order. You can also provide a comparator.
+
+List<String> sorted = names.stream()
+                           .sorted()
+                           .collect(Collectors.toList());
+
+List<String> customSorted = names.stream()
+                                 .sorted(Comparator.reverseOrder())
+                                 .collect(Collectors.toList());
+
+
+---
+
+8. distinct() – Removing duplicates
+
+List<Integer> numbers = List.of(1, 2, 2, 3, 4, 4);
+List<Integer> distinct = numbers.stream()
+                                .distinct()
+                                .collect(Collectors.toList());
+
+
+---
+
+9. limit() and skip()
+
+limit(n): Gets the first n elements.
+
+skip(n): Skips the first n elements.
+
+
+numbers.stream().limit(3).forEach(System.out::println);  // 1 2 3
+numbers.stream().skip(2).forEach(System.out::println);   // 3 4
+
+
+---
+
+10. count() – Counting elements
+
+long count = numbers.stream().filter(n -> n % 2 == 0).count();
+
+
+---
+
+11. anyMatch(), allMatch(), noneMatch()
+
+anyMatch: true if any element matches.
+
+allMatch: true if all elements match.
+
+noneMatch: true if no element matches.
+
+
+boolean anyEven = numbers.stream().anyMatch(n -> n % 2 == 0);
+boolean allPositive = numbers.stream().allMatch(n -> n > 0);
+boolean noneNegative = numbers.stream().noneMatch(n -> n < 0);
+
+
+---
+
+12. findFirst() and findAny()
+
+Returns an Optional describing the element.
+
+findFirst() gives the first element (useful in ordered streams).
+
+findAny() may return any element (faster with parallel streams).
+
+
+Optional<Integer> first = numbers.stream().findFirst();
+Optional<Integer> any = numbers.stream().findAny();
+
+
+---
+
+Advanced Level
+
+13. flatMap() – Flatten nested streams
+
+Used when you have nested structures like List<List<T>> and you want a single List<T>.
+
+List<List<String>> nested = List.of(List.of("A", "B"), List.of("C", "D"));
+
+List<String> flat = nested.stream()
+                          .flatMap(List::stream)
+                          .collect(Collectors.toList());
+
+
+---
+
+14. reduce() – Aggregating values
+
+reduce() is used for combining elements, like summing or finding max/min.
+
+int sum = numbers.stream().reduce(0, Integer::sum);
+
+String concatenated = names.stream().reduce("", (a, b) -> a + b);
+
+
+---
+
+15. Collectors.groupingBy() – Group elements by key
+
+Useful for classification/grouping.
+
+List<String> items = List.of("apple", "banana", "apple", "orange", "banana");
+
+Map<String, Long> frequencyMap = items.stream()
+                                      .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+
+---
+
+16. Parallel Streams – For multi-core processing
+
+Parallelizes stream operations.
+
+List<Integer> bigList = IntStream.range(1, 1000).boxed().collect(Collectors.toList());
+
+bigList.parallelStream()
+       .forEach(System.out::println);
+
+Note: Parallel streams are not always faster. Test before using in production.
+
+
+---
+
+17. Custom Collector – Define how to collect results
+
+Collector<String, ?, String> toUpperJoined =
+    Collector.of(
+        StringBuilder::new,
+        (sb, s) -> sb.append(s.toUpperCase()),
+        StringBuilder::append,
+        StringBuilder::toString
+    );
+
+String result = List.of("a", "b", "c").stream().collect(toUpperJoined);  // "ABC"
+
+
+---
+
+18. peek() – For debugging stream pipeline
+
+Used to inspect elements during the stream processing.
+
+List<String> debug = names.stream()
+                          .peek(name -> System.out.println("Before: " + name))
+                          .map(String::toUpperCase)
+                          .peek(name -> System.out.println("After: " + name))
+                          .collect(Collectors.toList());
+
+
+---
