@@ -1,5 +1,161 @@
 ---
 
+Beginner Level Questions
+
+1. What is the Stream API in Java?
+
+Expectation: You should mention it's a feature in Java 8 for processing collections in a functional style.
+
+
+
+2. How is a Stream different from a Collection?
+
+Tip: Mention laziness, immutability, and single-use nature of streams.
+
+
+
+3. How do you create a Stream in Java?
+
+Follow-up: From arrays, lists, or with Stream.of().
+
+
+
+4. What is the difference between map() and forEach()?
+
+Key Point: map() transforms, forEach() performs action (usually terminal).
+
+
+
+5. What are intermediate and terminal operations in streams?
+
+Answer: Intermediate returns a Stream (e.g., map, filter), terminal produces a result (collect, forEach, reduce).
+
+
+
+6. Can you explain filter() with an example?
+
+
+7. What does collect(Collectors.toList()) do?
+
+
+
+
+---
+
+Intermediate Level Questions
+
+8. What is the difference between map() and flatMap()?
+
+Good example: List<List<String>> to List<String> using flatMap().
+
+
+
+9. What does distinct() do and how does it work internally?
+
+
+10. What is the use of sorted()? How to sort a custom object list by a field?
+
+
+
+Tip: Use .sorted(Comparator.comparing(Class::getField))
+
+
+11. Explain limit() and skip() in streams.
+
+
+12. What is peek() in Stream API and when should it be used?
+
+
+
+Important: For debugging, not transformation.
+
+
+13. Difference between findFirst() and findAny()?
+
+
+
+Note: Emphasize behavior in parallel streams.
+
+
+14. How does anyMatch(), allMatch() and noneMatch() work? Give use cases.
+
+
+15. What is the use of reduce() in streams?
+
+
+
+Follow-up: Can you use reduce() to calculate sum or factorial?
+
+
+
+---
+
+Advanced Level Questions
+
+16. What are the advantages of using Stream API over loops?
+
+
+17. How do streams achieve laziness in execution?
+
+
+
+Tip: Mention short-circuiting and internal pipeline structure.
+
+
+18. What are the performance considerations of using streams?
+
+
+
+Bonus: Talk about overhead of autoboxing and when to prefer for loop.
+
+
+19. When should you use parallel streams? Any risks involved?
+
+
+
+Answer: Only with large data and stateless operations. Be cautious of thread-safety and shared mutable state.
+
+
+20. Explain grouping data using Collectors.groupingBy().
+
+
+
+Example: Group a list of employees by department.
+
+
+21. How would you count duplicate elements using streams?
+
+
+22. What is a custom collector? Can you write one?
+
+
+23. What are short-circuiting operations in streams?
+
+
+
+E.g. limit(), findFirst(), anyMatch().
+
+
+24. Can you create an infinite stream? How do you control it?
+
+
+
+Example:
+
+
+Stream.iterate(1, n -> n + 1).limit(10).forEach(System.out::println);
+
+25. Can streams be reused? If not, how do you process a stream twice?
+
+
+
+Answer: No, they are single-use. Use Supplier<Stream<T>> for reuse.
+
+
+
+---
+---
+
 Beginner Level
 
 1. What is Stream API?
