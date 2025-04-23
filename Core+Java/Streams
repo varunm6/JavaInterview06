@@ -1,3 +1,4 @@
+
 ---
 
 Beginner Level Questions
@@ -379,6 +380,151 @@ List<String> debug = names.stream()
                           .map(String::toUpperCase)
                           .peek(name -> System.out.println("After: " + name))
                           .collect(Collectors.toList());
+
+
+---
+---
+
+Basic Coding Questions
+
+1. Convert a list of strings to uppercase
+
+List<String> input = List.of("a", "b", "c");
+List<String> result = input.stream()
+                           .map(String::toUpperCase)
+                           .collect(Collectors.toList());
+
+
+---
+
+2. Find even numbers from a list
+
+List<Integer> nums = List.of(1, 2, 3, 4, 5);
+List<Integer> evens = nums.stream()
+                          .filter(n -> n % 2 == 0)
+                          .collect(Collectors.toList());
+
+
+---
+
+3. Count strings starting with "A"
+
+List<String> names = List.of("Adam", "Alex", "Brian");
+long count = names.stream()
+                  .filter(name -> name.startsWith("A"))
+                  .count();
+
+
+---
+
+Intermediate Coding Questions
+
+4. Find duplicate elements in a list
+
+List<String> list = List.of("apple", "banana", "apple", "orange", "banana");
+
+Set<String> seen = new HashSet<>();
+Set<String> duplicates = list.stream()
+                             .filter(e -> !seen.add(e))
+                             .collect(Collectors.toSet());
+
+
+---
+
+5. Group strings by their length
+
+List<String> words = List.of("hi", "hello", "yes", "no", "java");
+
+Map<Integer, List<String>> grouped = words.stream()
+                                          .collect(Collectors.groupingBy(String::length));
+
+
+---
+
+6. Sort a list of strings in reverse order
+
+List<String> sorted = words.stream()
+                           .sorted(Comparator.reverseOrder())
+                           .collect(Collectors.toList());
+
+
+---
+
+7. Join strings with a comma
+
+String joined = words.stream()
+                     .collect(Collectors.joining(", "));
+
+
+---
+
+8. Sum of all even numbers using reduce()
+
+int sum = nums.stream()
+              .filter(n -> n % 2 == 0)
+              .reduce(0, Integer::sum);
+
+
+---
+
+Advanced Coding Questions
+
+9. Find the first non-repeating character in a string
+
+String input = "swiss";
+
+Character result = input.chars()
+                        .mapToObj(c -> (char) c)
+                        .filter(c -> input.indexOf(c) == input.lastIndexOf(c))
+                        .findFirst()
+                        .orElse(null);
+
+
+---
+
+10. Group and count word frequency
+
+List<String> words = List.of("apple", "banana", "apple", "apple", "banana");
+
+Map<String, Long> frequency = words.stream()
+                                   .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+
+---
+
+11. Flatten a list of lists
+
+List<List<Integer>> nested = List.of(List.of(1, 2), List.of(3, 4));
+
+List<Integer> flat = nested.stream()
+                           .flatMap(List::stream)
+                           .collect(Collectors.toList());
+
+
+---
+
+12. Partition numbers into even and odd
+
+Map<Boolean, List<Integer>> partitioned = nums.stream()
+                                              .collect(Collectors.partitioningBy(n -> n % 2 == 0));
+
+
+---
+
+13. Get top 3 highest numbers
+
+List<Integer> top3 = nums.stream()
+                         .sorted(Comparator.reverseOrder())
+                         .limit(3)
+                         .collect(Collectors.toList());
+
+
+---
+
+14. Custom object grouping: Group employees by department
+
+Map<String, List<Employee>> byDept = employees.stream()
+                                              .collect(Collectors.groupingBy(Employee::getDepartment));
 
 
 ---
