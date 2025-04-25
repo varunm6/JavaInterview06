@@ -174,6 +174,187 @@ Find first non-repeating character in a string.
 
 
 ---
+---
+
+Java Stream API Practice Problems with Solutions
+
+1. Count Duplicate Elements in a List
+
+Problem: Given a list of strings, count the number of duplicate elements.
+
+Solution:
+
+List<String> names = List.of("Tom", "Jerry", "Tom", "Spike", "Jerry");
+
+Map<String, Long> duplicates = names.stream()
+    .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+    .entrySet().stream()
+    .filter(entry -> entry.getValue() > 1)
+    .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+
+System.out.println(duplicates);
+
+Explanation:
+
+groupingBy(Function.identity(), counting()) groups and counts each string.
+
+The second stream filters only entries with count > 1 (duplicates).
+
+
+
+---
+
+2. Find the Second-Highest Number in a List
+
+Problem: Given a list of integers, find the second highest number.
+
+Solution:
+
+List<Integer> numbers = List.of(5, 2, 9, 1, 9, 3);
+
+Optional<Integer> secondMax = numbers.stream()
+    .distinct()
+    .sorted(Comparator.reverseOrder())
+    .skip(1)
+    .findFirst();
+
+System.out.println(secondMax.orElse(null));
+
+Explanation:
+
+distinct() removes duplicates.
+
+sorted(Comparator.reverseOrder()) sorts descending.
+
+skip(1) skips the first (largest), giving the second highest.
+
+
+
+---
+
+3. Group Employees by Department
+
+Problem: Given a list of employees, group them by department.
+
+record Employee(String name, String dept) {}
+
+Solution:
+
+List<Employee> employees = List.of(
+    new Employee("Tom", "HR"),
+    new Employee("Jerry", "IT"),
+    new Employee("Spike", "IT")
+);
+
+Map<String, List<Employee>> grouped = employees.stream()
+    .collect(Collectors.groupingBy(Employee::dept));
+
+System.out.println(grouped);
+
+Explanation:
+
+groupingBy(Employee::dept) groups employees by their department field.
+
+
+
+---
+
+4. Sort List of Objects by Field
+
+Problem: Sort a list of employees by name.
+
+Solution:
+
+List<Employee> employees = List.of(
+    new Employee("Jerry", "IT"),
+    new Employee("Tom", "HR"),
+    new Employee("Spike", "IT")
+);
+
+List<Employee> sorted = employees.stream()
+    .sorted(Comparator.comparing(Employee::name))
+    .collect(Collectors.toList());
+
+System.out.println(sorted);
+
+Explanation:
+
+Comparator.comparing(Employee::name) sorts based on name field.
+
+
+
+---
+
+5. Find First Non-Repeating Character in a String
+
+Problem: Find the first non-repeating character in a given string.
+
+Solution:
+
+String input = "aabbcdeff";
+
+Optional<Character> firstNonRepeat = input.chars()
+    .mapToObj(c -> (char) c)
+    .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
+    .entrySet().stream()
+    .filter(entry -> entry.getValue() == 1)
+    .map(Map.Entry::getKey)
+    .findFirst();
+
+System.out.println(firstNonRepeat.orElse(null));
+
+Explanation:
+
+chars() converts to IntStream of characters.
+
+LinkedHashMap preserves insertion order.
+
+The first key with count = 1 is the first non-repeating character.
+
+
+
+---
+
+6. Find the Longest String in a List
+
+Problem: Find the longest string in a list.
+
+Solution:
+
+List<String> strings = List.of("Java", "Spring", "Microservices", "API");
+
+Optional<String> longest = strings.stream()
+    .max(Comparator.comparingInt(String::length));
+
+System.out.println(longest.orElse("None"));
+
+Explanation:
+
+max(Comparator.comparingInt(String::length)) gives the string with the maximum length.
+
+
+
+---
+
+7. Check if a List Contains Only Unique Elements
+
+Problem: Check if all elements in a list are unique.
+
+Solution:
+
+List<Integer> numbers = List.of(1, 2, 3, 4, 5, 5);
+
+boolean allUnique = numbers.stream().distinct().count() == numbers.size();
+
+System.out.println(allUnique);
+
+Explanation:
+
+Compare distinct().count() with original list size to determine uniqueness.
+
+
+
+---
 
 ---
 
