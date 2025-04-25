@@ -1,3 +1,179 @@
+---
+
+Java Stream API - Beginner to Advanced Guide
+
+1. Introduction to Stream API
+
+Theory:
+
+Introduced in Java 8, the Stream API is used to process collections of objects.
+
+It supports functional-style operations on streams of elements (like map-reduce transformations).
+
+Stream operations are either intermediate or terminal.
+
+Streams do not store data; they operate on the source (like a List, Set, etc.)
+
+
+Basic Syntax:
+
+List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
+list.stream().forEach(System.out::println);
+
+Common Interview Question: Q: What is the difference between a Stream and a Collection? A: A Collection is a data structure that holds data in memory; a Stream is a pipeline for processing data. Streams don’t store elements; they convey elements from a source through a pipeline of computational operations.
+
+
+---
+
+2. Creating Streams
+
+Theory:
+
+Streams can be created from collections, arrays, or generator functions.
+
+
+Examples:
+
+List<String> names = Arrays.asList("Tom", "Jerry", "Spike");
+Stream<String> stream = names.stream();
+
+Stream<Integer> numbers = Stream.of(1, 2, 3);
+Stream<Double> randoms = Stream.generate(Math::random).limit(5);
+
+
+---
+
+3. Intermediate Operations
+
+These return a new stream and are lazy (executed only when a terminal operation is invoked).
+
+a) filter(Predicate)
+
+Theory: Filters elements based on a condition.
+
+List<String> names = List.of("Sam", "Alex", "Sandy");
+names.stream()
+     .filter(name -> name.startsWith("S"))
+     .forEach(System.out::println);
+
+b) map(Function)
+
+Theory: Transforms each element.
+
+List<String> names = List.of("Tom", "Jerry");
+names.stream()
+     .map(String::toUpperCase)
+     .forEach(System.out::println);
+
+c) sorted()
+
+List<Integer> nums = List.of(5, 3, 9);
+nums.stream().sorted().forEach(System.out::println);
+
+
+---
+
+4. Terminal Operations
+
+These trigger the execution of the pipeline.
+
+a) forEach(Consumer)
+
+list.stream().forEach(System.out::println);
+
+b) collect(Collectors.toList())
+
+List<String> result = names.stream()
+                           .filter(n -> n.length() > 3)
+                           .collect(Collectors.toList());
+
+c) count(), min(), max()
+
+long count = list.stream().count();
+int max = list.stream().max(Integer::compare).get();
+
+
+---
+
+5. Advanced Operations
+
+a) flatMap()
+
+Theory: Flattens nested structures.
+
+List<List<String>> nested = List.of(List.of("A", "B"), List.of("C", "D"));
+List<String> flat = nested.stream()
+                          .flatMap(Collection::stream)
+                          .collect(Collectors.toList());
+
+b) reduce()
+
+Theory: Combines elements to produce a single value.
+
+int sum = List.of(1, 2, 3).stream()
+                          .reduce(0, Integer::sum);
+
+
+---
+
+6. Parallel Streams
+
+Theory: Used for parallel processing.
+
+list.parallelStream().forEach(System.out::println);
+
+
+---
+
+7. Collectors Utility
+
+Map<Integer, List<String>> grouped = names.stream()
+    .collect(Collectors.groupingBy(String::length));
+
+String joined = names.stream()
+    .collect(Collectors.joining(", "));
+
+
+---
+
+8. Common Interview Questions
+
+1. Q: What are intermediate and terminal operations in streams? A: Intermediate operations return a stream and are lazy. Terminal operations return a result and trigger execution.
+
+
+2. Q: What is the difference between map() and flatMap()? A: map() transforms elements individually; flatMap() flattens nested structures.
+
+
+3. Q: How does reduce() work in streams? A: reduce() applies an accumulator function to combine elements into one.
+
+
+4. Q: Can we reuse a stream? A: No. Streams can be consumed only once.
+
+
+5. Q: Difference between stream() and parallelStream()? A: stream() processes sequentially; parallelStream() processes in parallel.
+
+
+
+
+---
+
+9. Practice Problems
+
+I’ll share detailed solutions with explanations for these in follow-up messages if you're interested:
+
+Count duplicate elements in a list using streams.
+
+Find the second-highest number.
+
+Group employees by department.
+
+Sort list of objects by a field.
+
+Find first non-repeating character in a string.
+
+
+
+---
 
 ---
 
