@@ -1,0 +1,385 @@
+---
+
+Java OOPS Concepts (In-Depth)
+
+There are 4 main OOPS principles:
+
+1. Inheritance
+
+
+2. Polymorphism
+
+
+3. Encapsulation
+
+
+4. Abstraction
+
+
+
+Let's understand each — deeply.
+
+
+---
+
+1. Inheritance
+
+Definition:
+Inheritance allows a class (child class) to reuse the fields and methods of another class (parent class).
+
+Syntax:
+
+class Parent {
+    void display() {
+        System.out.println("Parent class method");
+    }
+}
+
+class Child extends Parent {
+    void show() {
+        System.out.println("Child class method");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Child c = new Child();
+        c.display(); // Parent class method
+        c.show();    // Child class method
+    }
+}
+
+Real-world Example:
+
+Parent class: Vehicle
+
+Child classes: Car, Bike, Truck
+Common features like engine, wheels are inherited.
+
+
+
+---
+
+2. Polymorphism
+
+Definition:
+Polymorphism means the same method name can perform different behaviors based on context.
+
+2 types:
+
+Compile-time polymorphism (Method Overloading)
+
+Runtime polymorphism (Method Overriding)
+
+
+
+---
+
+(a) Method Overloading (Compile-time) Same method name, different parameters.
+
+class MathOperation {
+    int add(int a, int b) {
+        return a + b;
+    }
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        MathOperation obj = new MathOperation();
+        System.out.println(obj.add(10, 20));     // 30
+        System.out.println(obj.add(10, 20, 30)); // 60
+    }
+}
+
+
+---
+
+(b) Method Overriding (Runtime) Child class provides a specific implementation of a method from parent class.
+
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Animal a = new Dog();  // upcasting
+        a.sound();  // Dog barks
+    }
+}
+
+
+---
+
+Real-world Example:
+
+Polymorphism in real life:
+You have a single remote control (method) that operates TV, AC, Fan (different devices).
+
+
+
+---
+
+3. Encapsulation
+
+Definition:
+Encapsulation is binding (grouping) data (variables) and methods that operate on the data into a single unit (class), and restricting direct access to some components.
+
+Achieved by:
+
+Making variables private
+
+Providing public getters and setters
+
+
+
+
+---
+
+Example:
+
+class Employee {
+    private String name; // private data
+
+    // Getter
+    public String getName() {
+        return name;
+    }
+    // Setter
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Employee emp = new Employee();
+        emp.setName("John");
+        System.out.println(emp.getName());
+    }
+}
+
+
+---
+
+Real-world Example:
+
+Bank Account:
+You can access balance via getters and setters, but can't directly modify internal values.
+
+
+
+---
+
+4. Abstraction
+
+Definition:
+Abstraction hides the internal implementation and shows only essential features to the user.
+
+Achieved by:
+
+Abstract Classes
+
+Interfaces
+
+
+
+---
+
+(a) Abstract Class Example
+
+abstract class Shape {
+    abstract void draw();
+}
+
+class Circle extends Shape {
+    void draw() {
+        System.out.println("Drawing Circle");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Shape s = new Circle();
+        s.draw(); 
+    }
+}
+
+
+---
+
+(b) Interface Example
+
+interface Animal {
+    void eat();
+}
+
+class Cat implements Animal {
+    public void eat() {
+        System.out.println("Cat eats fish");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Animal a = new Cat();
+        a.eat();
+    }
+}
+
+
+---
+
+Real-world Example:
+
+Abstraction:
+When you drive a car, you use the steering and pedals. You don't know internal engine mechanics.
+
+
+
+---
+
+Quick Summary Table
+
+
+---
+
+Basic OOPS Interview Questions
+
+Q1. What is the difference between Abstraction and Encapsulation?
+
+Abstraction hides implementation details.
+
+Encapsulation hides data for security and binds data with code.
+
+
+
+---
+
+Q2. Can Java support multiple inheritance?
+
+Classes: No (ambiguity problem like "Diamond Problem").
+
+Interfaces: Yes, Java allows multiple interface inheritance.
+
+
+
+---
+
+Q3. What are access modifiers?
+
+They define the scope (visibility) of classes, methods, variables:
+
+private, default, protected, public.
+
+
+
+
+---
+
+Tricky OOPS Interview Questions
+
+Q1. Can an abstract class have a constructor?
+
+> Answer: Yes, an abstract class can have a constructor, but it cannot be instantiated directly.
+
+
+
+
+---
+
+Q2. Can we achieve abstraction without abstract class or interface?
+
+> Answer: Partially yes — by using access modifiers like private methods or hiding code logic inside normal classes.
+
+
+
+
+---
+
+Q3. What happens if we override a method with a lower access level?
+
+> Answer: Compilation error!
+You cannot reduce the visibility of the inherited method.
+
+
+
+Example:
+
+class Parent {
+    public void show() {}
+}
+class Child extends Parent {
+    // void show() {} // ERROR! (must be public or protected, not default)
+}
+
+
+---
+
+Q4. Interface vs Abstract class: Which is faster?
+
+> Answer: Abstract classes are faster because no need for dynamic method resolution like interfaces (in JVM).
+
+
+
+
+---
+
+Q5. Why Java does not support multiple inheritance with classes?
+
+> Answer: To avoid ambiguity and complexity (Diamond Problem).
+Java solved it using interfaces.
+
+
+
+
+---
+
+Real-world Example-Based Tricky Question
+
+Q. Imagine you are designing a Payment Gateway — Credit Card, UPI, NetBanking, Wallets.
+Which OOPS principles you will use and why?
+
+Answer:
+
+Abstraction: Payment mode interface (UPI, Credit Card, etc.)
+
+Polymorphism: Single pay() method working differently for each payment type.
+
+Inheritance: Wallet, Card inherit from base Payment class.
+
+Encapsulation: Secure transaction data like OTP, Card Number using private fields.
+
+
+
+---
+
+Conclusion:
+
+You now have:
+
+Full theory of Java OOPS
+
+Code examples for each principle
+
+Real-world scenarios to easily relate
+
+Basic + tricky interview questions with answers
+
+
+
+---
+
+Would you like me to also give you a set of "only" tricky coding questions related to OOPS? (like Factory Pattern, Singleton, etc.)?
+These are very high-weight questions in interviews! Shall I continue?
+
