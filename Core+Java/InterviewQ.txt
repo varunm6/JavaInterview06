@@ -1,0 +1,282 @@
+---
+
+1. Java Beginner Interview Questions
+
+Q1. What is Java?
+
+Answer:
+Java is a high-level, object-oriented, platform-independent programming language. It is widely used for building applications across various domains like web, mobile, and enterprise software. Java follows the WORA principle — Write Once, Run Anywhere.
+
+
+---
+
+Q2. What are the features of Java?
+
+Answer:
+
+Object-Oriented
+
+Platform Independent
+
+Simple and Secure
+
+Robust and Portable
+
+Multithreaded
+
+High Performance (with JIT compiler)
+
+Distributed
+
+
+
+---
+
+Q3. What is the difference between JDK, JRE, and JVM?
+
+Answer: | Component | Description | |:---------|:------------| | JVM (Java Virtual Machine) | Runs Java bytecode and provides a runtime environment. | | JRE (Java Runtime Environment) | JVM + libraries + other files to run Java applications. | | JDK (Java Development Kit) | JRE + development tools (compiler, debugger) to develop Java programs. |
+
+
+---
+
+Q4. What is a Class and an Object?
+
+Answer:
+
+Class: Blueprint or template for creating objects (ex: Car, Animal).
+
+Object: Instance of a class (ex: new Car(), new Animal()).
+
+
+
+---
+
+Q5. What is Inheritance?
+
+Answer:
+Inheritance allows a class (child) to inherit properties and behaviors (methods) from another class (parent).
+
+class Animal {
+    void eat() { System.out.println("This animal eats food."); }
+}
+
+class Dog extends Animal {
+    void bark() { System.out.println("The dog barks."); }
+}
+
+public class Test {
+    public static void main(String args[]) {
+        Dog d = new Dog();
+        d.eat(); // Inherited method
+        d.bark();
+    }
+}
+
+
+---
+
+2. Java Intermediate to Advanced Interview Questions
+
+Q1. What is Polymorphism?
+
+Answer:
+Polymorphism means "many forms." In Java, it allows methods to perform different tasks based on the object that invokes them (compile-time (method overloading) and runtime (method overriding)).
+
+
+---
+
+Q2. What is Abstraction?
+
+Answer:
+Abstraction hides implementation details and shows only functionality to the user. In Java, abstraction is achieved by:
+
+Abstract classes
+
+Interfaces
+
+
+
+---
+
+Q3. Difference between Interface and Abstract Class?
+
+Answer: | Feature | Interface | Abstract Class | |:-------|:-----------| | Methods | Only abstract methods (Java 8+ allows default and static) | Can have abstract and concrete methods | | Variables | Public, static, and final by default | Can have various types | | Inheritance | A class can implement multiple interfaces | A class can extend only one abstract class |
+
+
+---
+
+Q4. What is Exception Handling?
+
+Answer:
+Exception Handling is a mechanism to handle runtime errors so that the normal flow of the program is maintained. Java uses try-catch-finally blocks.
+
+Example:
+
+try {
+    int data = 100/0;
+} catch(ArithmeticException e) {
+    System.out.println(e);
+} finally {
+    System.out.println("Finally block is executed");
+}
+
+
+---
+
+Q5. What is Multithreading?
+
+Answer:
+Multithreading is the capability of a CPU to run multiple threads simultaneously to maximize utilization.
+
+Example:
+
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Thread is running...");
+    }
+}
+
+public class TestThread {
+    public static void main(String args[]) {
+        MyThread t1 = new MyThread();
+        t1.start();
+    }
+}
+
+
+---
+
+3. Java Coding Interview Questions (with Code and Explanation)
+
+Q1. Reverse a String
+
+Question: Write a program to reverse a string without using built-in methods.
+
+Answer:
+
+public class ReverseString {
+    public static void main(String[] args) {
+        String input = "Hello";
+        String reversed = "";
+
+        for(int i = input.length() - 1; i >= 0; i--) {
+            reversed = reversed + input.charAt(i);
+        }
+        System.out.println("Reversed String: " + reversed);
+    }
+}
+
+
+---
+
+Q2. Check if a number is Prime
+
+Question: Write a program to check if a number is prime.
+
+Answer:
+
+public class PrimeCheck {
+    public static void main(String[] args) {
+        int num = 29;
+        boolean isPrime = true;
+
+        for(int i = 2; i <= num/2; i++) {
+            if(num % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        
+        if(isPrime)
+            System.out.println(num + " is a Prime Number.");
+        else
+            System.out.println(num + " is not a Prime Number.");
+    }
+}
+
+
+---
+
+Q3. Find Duplicate Elements in an Array
+
+Question: Find duplicates in an array.
+
+Answer:
+
+import java.util.HashSet;
+
+public class DuplicateElements {
+    public static void main(String[] args) {
+        int[] arr = {1, 5, 2, 3, 5, 1, 6};
+
+        HashSet<Integer> set = new HashSet<>();
+        for (int num : arr) {
+            if (!set.add(num)) {
+                System.out.println("Duplicate found: " + num);
+            }
+        }
+    }
+}
+
+
+---
+
+Q4. Palindrome Check
+
+Question: Check if a string is a palindrome.
+
+Answer:
+
+public class Palindrome {
+    public static void main(String[] args) {
+        String str = "madam";
+        String reversed = "";
+
+        for(int i = str.length() - 1; i >= 0; i--) {
+            reversed += str.charAt(i);
+        }
+        
+        if(str.equals(reversed))
+            System.out.println(str + " is a Palindrome.");
+        else
+            System.out.println(str + " is not a Palindrome.");
+    }
+}
+
+
+---
+
+Q5. Fibonacci Series
+
+Question: Print Fibonacci series up to n numbers.
+
+Answer:
+
+public class FibonacciSeries {
+    public static void main(String[] args) {
+        int n = 10, first = 0, second = 1;
+        System.out.print("Fibonacci Series: " + first + ", " + second);
+
+        for(int i = 2; i < n; i++) {
+            int next = first + second;
+            System.out.print(", " + next);
+            first = second;
+            second = next;
+        }
+    }
+}
+
+
+---
+
+Summary
+
+I covered both conceptual (theory) and coding questions.
+
+Ranging from beginner to advanced levels.
+
+All answers include examples or codes where needed.
+
+
+
+---
