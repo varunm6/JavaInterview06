@@ -1,0 +1,274 @@
+
+10. Find Duplicate Elements in Array
+------------------------------------
+public class Duplicates {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 1, 3, 6, 6};
+        Set<Integer> seen = new HashSet<>();
+        for (int num : arr) {
+            if (!seen.add(num)) {
+                System.out.println("Duplicate: " + num);
+            }
+        }
+    }
+}
+
+11. Check if Array is Sorted
+----------------------------
+public class CheckSorted {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        boolean isSorted = true;
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < arr[i - 1]) {
+                isSorted = false;
+                break;
+            }
+        }
+        System.out.println("Sorted: " + isSorted);
+    }
+}
+
+12. Find Missing Number in Range 1 to N
+---------------------------------------
+public class MissingNumber {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 4, 5, 6};
+        int n = 6;
+        int sum = n * (n + 1) / 2;
+        for (int num : arr) sum -= num;
+        System.out.println("Missing: " + sum);
+    }
+}
+
+13. Find All Pairs With Given Sum
+----------------------------------
+public class PairSum {
+    public static void main(String[] args) {
+        int[] arr = {1, 5, 7, -1, 5};
+        int sum = 6;
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int num : arr) {
+            int complement = sum - num;
+            if (map.containsKey(complement)) {
+                for (int i = 0; i < map.get(complement); i++) {
+                    System.out.println("(" + num + ", " + complement + ")");
+                }
+            }
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        }
+    }
+}
+
+14. Left Rotate an Array by One
+-------------------------------
+public class LeftRotate {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        int first = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            arr[i - 1] = arr[i];
+        }
+        arr[arr.length - 1] = first;
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+    }
+}
+
+15. Count Frequency of Elements
+-------------------------------
+public class FrequencyCount {
+    public static void main(String[] args) {
+        int[] arr = {10, 20, 20, 10, 10, 20, 5, 20};
+        Map<Integer, Integer> freq = new HashMap<>();
+        for (int num : arr) {
+            freq.put(num, freq.getOrDefault(num, 0) + 1);
+        }
+        System.out.println(freq);
+    }
+}
+
+16. Kadane’s Algorithm – Maximum Subarray Sum
+----------------------------------------------
+public class KadanesAlgorithm {
+    public static void main(String[] args) {
+        int[] arr = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+        int maxSoFar = arr[0], currentMax = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            currentMax = Math.max(arr[i], currentMax + arr[i]);
+            maxSoFar = Math.max(maxSoFar, currentMax);
+        }
+        System.out.println("Maximum subarray sum: " + maxSoFar);
+    }
+}
+
+17. Dutch National Flag Problem – Sort 0s, 1s and 2s
+----------------------------------------------------
+public class DutchFlag {
+    public static void main(String[] args) {
+        int[] arr = {2, 0, 2, 1, 1, 0};
+        int low = 0, mid = 0, high = arr.length - 1;
+        while (mid <= high) {
+            switch (arr[mid]) {
+                case 0: swap(arr, low++, mid++); break;
+                case 1: mid++; break;
+                case 2: swap(arr, mid, high--); break;
+            }
+        }
+        for (int num : arr) System.out.print(num + " ");
+    }
+    static void swap(int[] arr, int i, int j) {
+        int temp = arr[i]; arr[i] = arr[j]; arr[j] = temp;
+    }
+}
+
+18. Merge Two Sorted Arrays Without Extra Space
+-----------------------------------------------
+public class MergeSortedArrays {
+    public static void main(String[] args) {
+        int[] a = {1, 3, 5, 7};
+        int[] b = {0, 2, 6, 8, 9};
+        int m = a.length, n = b.length;
+        for (int i = 0; i < m; i++) {
+            if (a[i] > b[0]) {
+                int temp = a[i]; a[i] = b[0]; b[0] = temp;
+                int first = b[0], k;
+                for (k = 1; k < n && b[k] < first; k++) b[k - 1] = b[k];
+                b[k - 1] = first;
+            }
+        }
+        for (int num : a) System.out.print(num + " ");
+        for (int num : b) System.out.print(num + " ");
+    }
+}
+
+19. Find Majority Element (more than n/2 times)
+-----------------------------------------------
+public class MajorityElement {
+    public static void main(String[] args) {
+        int[] arr = {2, 2, 1, 1, 1, 2, 2};
+        int count = 0, candidate = 0;
+        for (int num : arr) {
+            if (count == 0) candidate = num;
+            count += (num == candidate) ? 1 : -1;
+        }
+        System.out.println("Majority Element: " + candidate);
+    }
+}
+
+20. Segregate Even and Odd Numbers
+----------------------------------
+public class SegregateEvenOdd {
+    public static void main(String[] args) {
+        int[] arr = {12, 34, 45, 9, 8, 90, 3};
+        int left = 0, right = arr.length - 1;
+        while (left < right) {
+            while (arr[left] % 2 == 0 && left < right) left++;
+            while (arr[right] % 2 == 1 && left < right) right--;
+            if (left < right) {
+                int temp = arr[left]; arr[left] = arr[right]; arr[right] = temp;
+                left++; right--;
+            }
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+}
+
+21. Longest Consecutive Subsequence
+-----------------------------------
+public class LongestConsecutive {
+    public static void main(String[] args) {
+        int[] arr = {100, 4, 200, 1, 3, 2};
+        Set<Integer> set = new HashSet<>();
+        for (int num : arr) set.add(num);
+
+        int longest = 0;
+        for (int num : arr) {
+            if (!set.contains(num - 1)) {
+                int current = num;
+                int streak = 1;
+                while (set.contains(current + 1)) {
+                    current++;
+                    streak++;
+                }
+                longest = Math.max(longest, streak);
+            }
+        }
+        System.out.println("Longest consecutive subsequence: " + longest);
+    }
+}
+
+22. Rearrange Array Alternating Positive & Negative
+---------------------------------------------------
+public class RearrangeAlternating {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, -4, -1, 4};
+        List<Integer> pos = new ArrayList<>(), neg = new ArrayList<>();
+        for (int num : arr) {
+            if (num >= 0) pos.add(num);
+            else neg.add(num);
+        }
+        int i = 0, p = 0, n = 0;
+        while (p < pos.size() && n < neg.size()) {
+            arr[i++] = pos.get(p++);
+            arr[i++] = neg.get(n++);
+        }
+        while (p < pos.size()) arr[i++] = pos.get(p++);
+        while (n < neg.size()) arr[i++] = neg.get(n++);
+        System.out.println(Arrays.toString(arr));
+    }
+}
+
+23. Move All Zeros to End
+--------------------------
+public class MoveZeros {
+    public static void main(String[] args) {
+        int[] arr = {0, 1, 0, 3, 12};
+        int index = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] != 0) arr[index++] = arr[i];
+        }
+        while (index < arr.length) arr[index++] = 0;
+        System.out.println(Arrays.toString(arr));
+    }
+}
+
+24. Max Product Subarray
+------------------------
+public class MaxProductSubarray {
+    public static void main(String[] args) {
+        int[] nums = {2, 3, -2, 4};
+        int max = nums[0], min = nums[0], result = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            int temp = max;
+            max = Math.max(nums[i], Math.max(max * nums[i], min * nums[i]));
+            min = Math.min(nums[i], Math.min(temp * nums[i], min * nums[i]));
+            result = Math.max(result, max);
+        }
+        System.out.println("Max product subarray: " + result);
+    }
+}
+
+25. Trapping Rain Water
+------------------------
+public class TrappingRainWater {
+    public static void main(String[] args) {
+        int[] height = {0,1,0,2,1,0,1,3,2,1,2,1};
+        int n = height.length;
+        int[] leftMax = new int[n], rightMax = new int[n];
+        leftMax[0] = height[0];
+        for (int i = 1; i < n; i++) {
+            leftMax[i] = Math.max(leftMax[i-1], height[i]);
+        }
+        rightMax[n-1] = height[n-1];
+        for (int i = n-2; i >= 0; i--) {
+            rightMax[i] = Math.max(rightMax[i+1], height[i]);
+        }
+        int water = 0;
+        for (int i = 0; i < n; i++) {
+            water += Math.min(leftMax[i], rightMax[i]) - height[i];
+        }
+        System.out.println("Trapped water: " + water);
+    }
+}
