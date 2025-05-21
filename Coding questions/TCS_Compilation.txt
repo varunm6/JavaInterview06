@@ -1,22 +1,804 @@
+ItsRunTym
 
-43 Repeating TCS Ques (25 Array & 18 String with Sol)
----
-Array Questions with Java Solutions:
-1. Find the smallest number in an array
-2. Find the largest number in an array
-3. Find the second smallest and second largest element in an array
-4. Reverse a given array
-5. Count the frequency of each element in an array
-...
+43 Repeating TCS Ques
+(25 Array & 18 String with Sol)
+
+
+QUESTIONS
+YouTube
+Solution
+1.  Find the smallest number in an array
+
+
+
+
+2.  Find the largest number in an array
+3.  Find the second smallest and second largest element in an
+array
+4.  Reverse a given array
+5.  Count the frequency of each element in an array
+6. Rearrange the array in increasing-decreasing order
+
+
+
+7.  Calculate the sum of the elements of the array
+8.  Rotate an array by K elements - Block Swap Algorithm
+9.  Find the average of all elements in an array
+10. Find the median of the given array
+11. Remove duplicates from a sorted array
+
+
+
+12. Remove duplicates from an unsorted array
+13. Add an element in an array
+14. Find all repeating elements in an array
+15. Find all non-repeating elements in an array
+16. Find all symmetric pairs in an array
+
+
+
+17. Find the maximum product subarray in an array
+18. Replace each element of the array by its rank in the array
+19. Sort the elements of an array by frequency
+20. Rotate the elements of an array (left and right)
+21. Find the equilibrium index of an array
+
+
+
+22. Find the circular rotation of an array by K positions
+23. Sort an array according to the order defined by another array
+24. Search for an element in an array
 25. Check if an array is a subset of another array or not
 
-String Questions with Java Solutions:
-26. Check if a given string is palindrome or not
-27. Count number of vowels, consonants, spaces in a string
-28. Find the ASCII value of a character
-29. Remove all vowels from the string
-30. Remove spaces from a string
-...
-43. Print all the duplicates in the input string
 
-(Full code solutions and complexity analysis are included.)
+
+
+26. Check if a given string is palindrome or not.
+
+
+
+
+27. Count number of vowels, consonants, spaces in a string.
+28. Find the ASCII value of a character.
+29. Remove all vowels from the string.
+30. Remove spaces from a string.
+31. Remove characters from a string except alphabets.
+32. Reverse a string.
+
+
+
+
+33. Remove brackets from an algebraic expression.
+34. Sum of the numbers in a string.
+35. Capitalize first and last character of each word.
+36. Calculate frequency of characters in a string.
+37. Find non-repeating characters of a string.
+38. Check if two strings are anagrams of each other.
+
+
+
+
+
+39. Count common sub-sequence in two strings.
+40. Check if two strings match where one string contains wildcard
+characters.
+41. Return maximum occurring character in the input string.
+42. Remove all duplicates from the input string.
+43. Print all the duplicates in the input string.
+
+
+
+
+
+Find the smallest number in an array
+java
+
+
+public static int findSmallest(int[] arr) { int min = arr[0];
+for (int i = 1; i < arr.length; i++) { if (arr[i] < min) {
+min = arr[i];
+}
+}
+return min;
+}
+
+Time Complexity: O(n) — We scan the entire array once.
+Space Complexity: O(1) — We use only a few extra variables.
+
+Find the largest number in an array
+java
+
+
+public static int findLargest(int[] arr) { int max = arr[0];
+for (int i = 1; i < arr.length; i++) { if (arr[i] > max) {
+max = arr[i];
+}
+}
+return max;
+}
+Time Complexity: O(n) — We scan the entire array once.
+Space Complexity: O(1) — Only one variable is used for storing the maximum.
+
+Find the second smallest and second largest element in an array
+java
+
+
+public static int[] findSecondSmallestAndLargest(int[] arr) { Arrays.sort(arr);
+return new int[]{arr[1], arr[arr.length - 2]};
+}
+Time Complexity: O(n log n) — Due to sorting.
+Space Complexity: O(1) — Only two variables are used.
+
+Reverse a given array
+
+java
+
+
+public static void reverseArray(int[] arr) { int start = 0, end = arr.length - 1;
+while (start < end) { int temp = arr[start]; arr[start] = arr[end]; arr[end] = temp;
+start++; end--;
+}
+}
+Time Complexity: O(n) — Each element is swapped once.
+Space Complexity: O(1) — We are swapping elements in place.
+
+Count the frequency of each element in an array
+java
+
+
+public static Map<Integer, Integer> countFrequency(int[] arr) { Map<Integer, Integer> freqMap = new HashMap<>();
+for (int num : arr) {
+freqMap.put(num, freqMap.getOrDefault(num, 0) + 1);
+}
+return freqMap;
+}
+Time Complexity: O(n) — We traverse the array once.
+Space Complexity: O(n) — Space is required for the frequency map.
+
+Rearrange the array in increasing-decreasing order
+
+java
+
+
+public static void rearrangeIncDec(int[] arr) { Arrays.sort(arr);
+int[] result = new int[arr.length]; int left = 0, right = arr.length - 1; for (int i = 0; i < arr.length; i++) {
+if (i % 2 == 0) {
+result[i] = arr[right--];
+} else {
+result[i] = arr[left++];
+}
+}
+System.arraycopy(result, 0, arr, 0, arr.length);
+}
+Time Complexity: O(n log n) — Due to sorting.
+Space Complexity: O(n) — We use an extra array for rearranging.
+
+Calculate the sum of the elements of the array
+java
+
+
+public static int sumOfArray(int[] arr) { int sum = 0;
+for (int num : arr) { sum += num;
+}
+return sum;
+}
+Time Complexity: O(n) — We traverse the array once.
+
+Space Complexity: O(1) — No extra space required.
+
+Rotate an array by K elements (Block Swap Algorithm)
+java
+
+
+public static void rotateArray(int[] arr, int k) { int n = arr.length;
+k = k % n;
+reverse(arr, 0, k - 1);
+reverse(arr, k, n - 1);
+reverse(arr, 0, n - 1);
+}
+
+
+public static void reverse(int[] arr, int start, int end) { while (start < end) {
+int temp = arr[start]; arr[start] = arr[end]; arr[end] = temp;
+start++; end--;
+}
+}
+Time Complexity: O(n) — Each element is reversed a constant number of times.
+Space Complexity: O(1) — In-place modification.
+
+Find the average of all elements in an array
+java
+
+
+public static double findAverage(int[] arr) {
+
+return (double) sumOfArray(arr) / arr.length;
+}
+Time Complexity: O(n) — We reuse the sum calculation.
+Space Complexity: O(1) — Only constant space used.
+
+Find the median of the given array
+java
+
+
+public static double findMedian(int[] arr) { Arrays.sort(arr);
+int n = arr.length; if (n % 2 == 0) {
+return (arr[n / 2 - 1] + arr[n / 2]) / 2.0;
+} else {
+return arr[n / 2];
+}
+}
+Time Complexity: O(n log n) — Sorting the array.
+Space Complexity: O(1) — Sorting is done in place.
+
+Remove duplicates from a sorted array
+java
+
+
+public static int[] removeDuplicatesFromSorted(int[] arr) { if (arr.length == 0) return new int[0];
+int j = 0;
+for (int i = 1; i < arr.length; i++) { if (arr[i] != arr[j]) {
+j++;
+
+arr[j] = arr[i];
+}
+}
+return Arrays.copyOf(arr, j + 1);
+}
+Time Complexity: O(n) — One pass through the array.
+Space Complexity: O(1) — No extra space needed except the result.
+
+Remove duplicates from an unsorted array
+java
+
+
+public static int[] removeDuplicatesFromUnsorted(int[] arr) { Set<Integer> set = new LinkedHashSet<>();
+for (int num : arr) { set.add(num);
+}
+int[] result = new int[set.size()]; int i = 0;
+for (int num : set) { result[i++] = num;
+}
+return result;
+}
+Time Complexity: O(n) — We iterate over the array and use a set.
+Space Complexity: O(n) — The set takes extra space.
+
+Add an element in an array
+java
+
+public static int[] addElement(int[] arr, int element) { int[] newArr = new int[arr.length + 1];
+System.arraycopy(arr, 0, newArr, 0, arr.length); newArr[arr.length] = element;
+return newArr;
+}
+Time Complexity: O(n) — Copying the entire array.
+Space Complexity: O(n) — Extra space for the new array.
+
+Find all repeating elements in an array
+java
+
+
+public static List<Integer> findRepeating(int[] arr) { Set<Integer> seen = new HashSet<>();
+List<Integer> repeating = new ArrayList<>(); for (int num : arr) {
+if (!seen.add(num)) { repeating.add(num);
+}
+}
+return repeating;
+}
+Time Complexity: O(n) — We traverse the array and use a set.
+Space Complexity: O(n) — Set and list both take linear space.
+
+Find all non-repeating elements in an array
+java
+
+
+public static List<Integer> findNonRepeating(int[] arr) {
+
+Map<Integer, Integer> countMap = new HashMap<>(); for (int num : arr) {
+countMap.put(num, countMap.getOrDefault(num, 0) + 1);
+}
+List<Integer> result = new ArrayList<>();
+for (Map.Entry<Integer, Integer> entry : countMap.entrySet()) { if (entry.getValue() == 1) {
+result.add(entry.getKey());
+}
+}
+return result;
+}
+Time Complexity: O(n) — Two passes: one to count, another to filter.
+Space Complexity: O(n) — HashMap to store counts.
+
+Find all symmetric pairs in an array
+java
+
+
+public static List<int[]> findSymmetricPairs(int[][] arr) { Map<Integer, Integer> map = new HashMap<>(); List<int[]> result = new ArrayList<>();
+for (int[] pair : arr) {
+int first = pair[0], second = pair[1];
+if (map.containsKey(second) && map.get(second) == first) { result.add(new int[]{second, first});
+} else {
+map.put(first, second);
+}
+}
+
+return result;
+}
+Time Complexity: O(n) — Traverse the array once.
+Space Complexity: O(n) — Map takes linear space.
+
+Find the maximum product subarray in an array
+java
+
+
+public static int maxProductSubarray(int[] arr) { int max = arr[0], min = arr[0], result = arr[0]; for (int i = 1; i < arr.length; i++) {
+if (arr[i] < 0) {
+int temp = max; max = min;
+min = temp;
+}
+max = Math.max(arr[i], max * arr[i]); min = Math.min(arr[i], min * arr[i]); result = Math.max(result, max);
+}
+return result;
+}
+Time Complexity: O(n) — One pass through the array.
+Space Complexity: O(1) — Constant extra space.
+
+Replace each element of the array by its rank in the array
+java
+
+
+public static int[] rankArray(int[] arr) {
+
+int[] sorted = arr.clone(); Arrays.sort(sorted);
+Map<Integer, Integer> rankMap = new HashMap<>(); for (int i = 0; i < sorted.length; i++) {
+rankMap.putIfAbsent(sorted[i], i + 1);
+}
+for (int i = 0; i < arr.length; i++) { arr[i] = rankMap.get(arr[i]);
+}
+return arr;
+}
+Time Complexity: O(n log n) — Sorting the array.
+Space Complexity: O(n) — Space for the rank map.
+
+Sort the elements of an array by frequency
+java
+
+
+public static int[] sortByFrequency(int[] arr) {
+Map<Integer, Integer> freqMap = new HashMap<>(); for (int num : arr) {
+freqMap.put(num, freqMap.getOrDefault(num, 0) + 1);
+}
+return Arrays.stream(arr)
+.boxed()
+.sorted((a, b) -> {
+int freqCompare = freqMap.get(b).compareTo(freqMap.get(a)); return freqCompare != 0 ? freqCompare : Integer.compare(a, b);
+})
+.mapToInt(i -> i)
+
+.toArray();
+}
+Time Complexity: O(n log n) — Sorting the array by frequency.
+Space Complexity: O(n) — Map and result array.
+
+Rotate the elements of an array (left and right)
+java
+
+
+public static void rotateLeft(int[] arr, int k) { k = k % arr.length;
+reverse(arr, 0, k - 1);
+reverse(arr, k, arr.length - 1); reverse(arr, 0, arr.length - 1);
+}
+
+
+public static void rotateRight(int[] arr, int k) { k = k % arr.length;
+reverse(arr, 0, arr.length - 1);
+reverse(arr, 0, k - 1);
+reverse(arr, k, arr.length - 1);
+}
+Time Complexity: O(n) — Reversing the elements.
+Space Complexity: O(1) — No extra space used.
+
+Find the equilibrium index of an array
+java
+
+
+public static int findEquilibriumIndex(int[] arr) { int totalSum = 0, leftSum = 0;
+
+for (int num : arr) totalSum += num; for (int i = 0; i < arr.length; i++) {
+totalSum -= arr[i];
+if (leftSum == totalSum) return i; leftSum += arr[i];
+}
+return -1;
+}
+Time Complexity: O(n) — Single pass through the array.
+Space Complexity: O(1) — Only a few extra variables.
+
+Find the circular rotation of an array by K positions
+java
+
+
+public static void circularRotate(int[] arr, int k) { k = k % arr.length;
+reverse(arr, 0, arr.length - 1);
+reverse(arr, 0, k - 1);
+reverse(arr, k, arr.length - 1);
+}
+Time Complexity: O(n) — Reversing elements.
+Space Complexity: O(1) — In-place reversal.
+
+Sort an array according to the order defined by another array
+java
+
+
+public static int[] sortByOrder(int[] arr, int[] order) { Map<Integer, Integer> freqMap = new HashMap<>(); for (int num : arr) {
+
+freqMap.put(num, freqMap.getOrDefault(num, 0) + 1);
+}
+int index = 0;
+for (int num : order) {
+if (freqMap.containsKey(num)) { int count = freqMap.get(num); while (count-- > 0) {
+arr[index++] = num;
+}
+freqMap.remove(num);
+}
+}
+for (int num : freqMap.keySet()) { int count = freqMap.get(num); while (count-- > 0) {
+arr[index++] = num;
+}
+}
+return arr;
+}
+Time Complexity: O(n + m) — n is the size of the array, m is the size of the order array.
+Space Complexity: O(n) — Extra space for the frequency map.
+
+Search for an element in an array
+java
+
+
+public static int searchElement(int[] arr, int key) { for (int i = 0; i < arr.length; i++) {
+if (arr[i] == key) return i;
+
+}
+return -1;
+}
+Time Complexity: O(n) — Scan through the array.
+Space Complexity: O(1) — No extra space.
+
+Check if an array is a subset of another array or not
+java
+
+
+public static boolean isSubset(int[] arr1, int[] arr2) { Set<Integer> set = new HashSet<>();
+for (int num : arr1) { set.add(num);
+}
+for (int num : arr2) {
+if (!set.contains(num)) { return false;
+}
+}
+return true;
+}
+Time Complexity: O(n + m) — n is the size of the first array, m is the size of the second array.
+Space Complexity: O(n) — Extra space for the set.
+
+STRINGS
+Check if a given string is palindrome or not
+java
+
+
+public class PalindromeCheck {
+public static boolean isPalindrome(String str) { int left = 0, right = str.length() - 1;
+while (left < right) {
+if (str.charAt(left) != str.charAt(right)) { return false;
+}
+left++; right--;
+}
+return true;
+}
+
+
+public static void main(String[] args) { String str = "madam";
+System.out.println(isPalindrome(str)); // Output: true
+}
+}
+Time Complexity: O(n)
+Space Complexity: O(1)
+
+Count number of vowels, consonants, spaces in String
+java
+
+
+public class VowelConsonantSpaceCount { public static void countElements(String str) {
+
+int vowels = 0, consonants = 0, spaces = 0; str = str.toLowerCase();
+for (char ch : str.toCharArray()) { if (ch == ' ') {
+spaces++;
+} else if (ch >= 'a' && ch <= 'z') {
+if ("aeiou".indexOf(ch) != -1) vowels++; else consonants++;
+}
+}
+System.out.println("Vowels: " + vowels);
+System.out.println("Consonants: " + consonants); System.out.println("Spaces: " + spaces);
+}
+
+
+public static void main(String[] args) { String str = "Hello World";
+countElements(str);
+}
+}
+Time Complexity: O(n)
+Space Complexity: O(1)
+
+Find the ASCII value of a character
+java
+
+
+public class AsciiValue {
+public static int getAsciiValue(char ch) { return (int) ch;
+}
+
+public static void main(String[] args) { char ch = 'A';
+System.out.println(getAsciiValue(ch)); // Output: 65
+}
+}
+Time Complexity: O(1)
+Space Complexity: O(1)
+
+Remove all vowels from the string
+java
+
+
+public class RemoveVowels {
+public static String removeVowels(String str) { return str.replaceAll("[AEIOUaeiou]", "");
+}
+
+
+public static void main(String[] args) { String str = "Hello World";
+System.out.println(removeVowels(str)); // Output: Hll Wrld
+}
+}
+Time Complexity: O(n)
+Space Complexity: O(n)
+
+Remove spaces from a string
+java
+
+
+public class RemoveSpaces {
+public static String removeSpaces(String str) { return str.replaceAll("\\s", "");
+}
+
+public static void main(String[] args) { String str = "Hello World";
+System.out.println(removeSpaces(str)); // Output: HelloWorld
+}
+}
+Time Complexity: O(n)
+Space Complexity: O(n)
+
+Remove characters from a string except alphabets
+java
+
+
+public class RemoveNonAlphabets {
+public static String removeNonAlphabets(String str) { return str.replaceAll("[^a-zA-Z]", "");
+}
+
+
+public static void main(String[] args) { String str = "Hello123 @World!";
+System.out.println(removeNonAlphabets(str)); // Output: HelloWorld
+}
+}
+Time Complexity: O(n)
+Space Complexity: O(n)
+
+Reverse a String
+java
+
+
+public class ReverseString {
+public static String reverse(String str) {
+return new StringBuilder(str).reverse().toString();
+
+}
+
+
+public static void main(String[] args) { String str = "Hello";
+System.out.println(reverse(str)); // Output: olleH
+}
+}
+Time Complexity: O(n)
+Space Complexity: O(n)
+
+Remove brackets from an algebraic expression
+java
+
+
+public class RemoveBrackets {
+public static String removeBrackets(String str) { return str.replaceAll("[\\[\\]{}()]", "");
+}
+
+
+public static void main(String[] args) { String str = "3 + (2 * [4 + 5])";
+System.out.println(removeBrackets(str)); // Output: 3 + 2 * 4 + 5
+}
+}
+Time Complexity: O(n)
+Space Complexity: O(n)
+
+Sum of the numbers in a String
+java
+
+
+public class SumOfNumbers {
+public static int sumOfNumbers(String str) {
+
+int sum = 0;
+String temp = "";
+for (char ch : str.toCharArray()) { if (Character.isDigit(ch)) {
+temp += ch;
+} else {
+if (!temp.isEmpty()) {
+sum += Integer.parseInt(temp); temp = "";
+}
+}
+}
+if (!temp.isEmpty()) {
+sum += Integer.parseInt(temp);
+}
+return sum;
+}
+
+
+public static void main(String[] args) { String str = "12abc34def56";
+System.out.println(sumOfNumbers(str)); // Output: 102
+}
+}
+Time Complexity: O(n)
+Space Complexity: O(1)
+
+Capitalize first and last character of each word
+java
+
+
+public class CapitalizeFirstLast {
+public static String capitalizeFirstLast(String str) {
+
+String[] words = str.split("\\s+");
+StringBuilder result = new StringBuilder();
+
+
+for (String word : words) { if (word.length() == 1) {
+result.append(word.toUpperCase()).append(" ");
+} else {
+result.append(word.substring(0, 1).toUpperCase())
+.append(word.substring(1, word.length() - 1))
+.append(word.substring(word.length() - 1).toUpperCase())
+.append(" ");
+}
+}
+return result.toString().trim();
+}
+
+
+public static void main(String[] args) { String str = "hello world";
+System.out.println(capitalizeFirstLast(str)); // Output: HellO WorlD
+}
+}
+Time Complexity: O(n)
+Space Complexity: O(n)
+
+Calculate frequency of characters in a string
+java
+
+
+import java.util.HashMap; import java.util.Map;
+
+public class CharacterFrequency {
+
+public static void frequencyCount(String str) {
+Map<Character, Integer> frequencyMap = new HashMap<>(); for (char ch : str.toCharArray()) {
+frequencyMap.put(ch, frequencyMap.getOrDefault(ch, 0) + 1);
+}
+System.out.println(frequencyMap);
+}
+
+
+public static void main(String[] args) { String str = "hello world";
+frequencyCount(str); // Output: {d=1, e=1, h=1, l=3, o=2, r=1, w=1}
+}
+}
+Time Complexity: O(n)
+Space Complexity: O(n)
+
+Find non-repeating characters of a String
+java
+
+
+import java.util.LinkedHashMap; import java.util.Map;
+
+public class NonRepeatingCharacters {
+public static void findNonRepeating(String str) {
+Map<Character, Integer> countMap = new LinkedHashMap<>(); for (char ch : str.toCharArray()) {
+countMap.put(ch, countMap.getOrDefault(ch, 0) + 1);
+}
+
+
+System.out.println("Non-repeating characters:");
+for (Map.Entry<Character, Integer> entry : countMap.entrySet()) {
+
+if (entry.getValue() == 1) {
+System.out.print(entry.getKey() + " ");
+}
+}
+}
+
+
+public static void main(String[] args) { String str = "hello world";
+findNonRepeating(str); // Output: h e w r d
+}
+}
+Time Complexity: O(n)
+Space Complexity: O(n)
+
+Check if two strings are anagram of each other
+java
+
+
+import java.util.Arrays;
+
+
+public class AnagramCheck {
+public static boolean isAnagram(String str1, String str2) { if (str1.length() != str2.length()) return false;
+char[] arr1 = str1.toCharArray(); char[] arr2 = str2.toCharArray(); Arrays.sort(arr1);
+Arrays.sort(arr2);
+return Arrays.equals(arr1, arr2);
+}
+
+
+public static void main(String[] args) { String str1 = "listen";
+
+String str2 = "silent";
+System.out.println(isAnagram(str1, str2)); // Output: true
+}
+}
+Time Complexity: O(n log n) (due to sorting)
+Space Complexity: O(n)
+
+Count common sub-sequence in two strings
+java
+
+
+public class CommonSubsequence {
+public static int countCommonSubsequence(String str1, String str2) { int[][] dp = new int[str1.length() + 1][str2.length() + 1];
+
+for (int i = 1; i <= str1.length(); i++) { for (int j = 1; j <= str2.length(); j++) {
+if (str1.charAt(i - 1) == str2.charAt(j - 1)) { dp[i][j] = dp[i - 1][j - 1] + 1;
+} else {
+dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
+}
+}
+}
+return dp[str1.length()][str2.length()];
+}
+
+
+public static void main(String[] args) { String str1 = "abc";
+String str2 = "abc";
+System.out.println(countCommonSubsequence(str1, str2)); // Output: 3
+}
+
+}
+Time Complexity: O(m * n) (m and n are lengths of the two strings)
+Space Complexity: O(m * n)
+
+Check if two strings match where one string contains wildcard characters
+java
+
+
+public class WildcardMatching {
+public static boolean isMatch(String str, String pattern) { int m = str.length(), n = pattern.length();
+boolean[][] dp = new boolean[m + 1][n + 1]; dp[0][0] = true;
+
+for (int j = 1; j <= n; j++) {
+if (pattern.charAt(j - 1) == '*') dp[0][j] = dp[0][j - 1];
+}
+
+
+for (int i = 1; i <= m; i++) { for (int j = 1; j <= n; j++) {
+if (pattern.charAt(j - 1) == '?' || pattern.charAt(j - 1) == str.charAt(i - 1)) { dp[i][j] = dp[i - 1][j - 1];
+} else if (pattern.charAt(j - 1) == '*') { dp[i][j] = dp[i - 1][j] 
