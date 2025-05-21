@@ -1,0 +1,22 @@
+
+43 Repeating TCS Ques (25 Array & 18 String with Sol)
+---
+Array Questions with Java Solutions:
+1. Find the smallest number in an array
+2. Find the largest number in an array
+3. Find the second smallest and second largest element in an array
+4. Reverse a given array
+5. Count the frequency of each element in an array
+...
+25. Check if an array is a subset of another array or not
+
+String Questions with Java Solutions:
+26. Check if a given string is palindrome or not
+27. Count number of vowels, consonants, spaces in a string
+28. Find the ASCII value of a character
+29. Remove all vowels from the string
+30. Remove spaces from a string
+...
+43. Print all the duplicates in the input string
+
+(Full code solutions and complexity analysis are included.)
