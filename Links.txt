@@ -24,6 +24,9 @@ https://youtu.be/T0u5nwSA0w0?si=dzpveMudGroWTqLN
 streams:
 https://youtu.be/ezy4AlThN_8
 
+hashmap:
+https://youtu.be/-oafFAPgLao?si=UhGh1h22h_ADPMMG
+https://youtu.be/CpVALR9HeTE?si=iiASz0y3ZS8qzYHa
 
 java interview questions:
 https://youtu.be/FFfJeb8Ec6Y?si=yuF5_e_feXG2QIEL
