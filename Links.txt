@@ -1,6 +1,9 @@
 kafka:
 https://youtu.be/tU_37niRh4U
 
+angular:
+https://youtu.be/oUmVFHlwZsI
+
 https://yellowcoder.in/
 https://sites.google.com/view/javapreparationpro
 
