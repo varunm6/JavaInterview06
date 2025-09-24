@@ -1,3 +1,6 @@
+sort 0,1,2
+https://youtu.be/oaVa-9wmpns
+
 kafka:
 https://youtu.be/tU_37niRh4U
 
