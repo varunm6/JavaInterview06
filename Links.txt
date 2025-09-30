@@ -1,3 +1,6 @@
+snowflake:
+https://youtu.be/mP3QbYURT9k
+
 java sql: https://youtu.be/oX5Y26O5dBE
 sort 0,1,2
 https://youtu.be/oaVa-9wmpns
