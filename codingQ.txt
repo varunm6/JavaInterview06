@@ -1,0 +1,71 @@
+Q1. How many male and female employees are there in the organization ?
+
+Q2. Find sum of even numbers and sum of odd numbers in a given list ?
+
+Q3. Find duplicate elements in a given integers list ?
+
+Q4. Remove all the occurrences of a given character ?
+
+Q5. Find Special characters in a string ?
+
+Q6. Find out all the numbers starting with 1 from a integer list ?
+
+Q7. Find the employee with the highest salary from a list of employee objects ?
+
+Q8. Concatenate a list of strings into a single string, separated by commas ?
+
+Q9. Find the first non-repeating character in a string ?
+
+Q10. Find frequency of characters of a given string ?
+
+Q11. Group a list of strings by their length ?
+
+Q12. Count the number of occurrences of each character in a string ?
+
+Q13. Filter a list of numbers to only include those greater than 10 and then find their average ?
+
+Q14. Convert a list of strings to map where key is the string and the value is the length ?
+
+Q15. Flatten a list of lists of integers into a single list of integers ?
+
+Q16. Given a list of transactions, filter out transactions of a specific type and collect them into a set ?
+
+Q17. Find the first name of the oldest person in a list of Person objects ?
+
+Q18. Skip the first 5 elements in a list and then print the rest ?
+
+Q19. Collect all unique words from a list of sentences ?
+
+Q20. Filter out null values from a list of strings using streams ?
+
+Q21. Partition a list of integers into even and odd numbers ?
+
+Q22. Generate an infinite sequence of random numbers and print the first 10 ?
+
+Q23. Find the sum of the squares of a list of integers ?
+
+Q24. Convert a list of strings to a list of their respective length using streams ?
+
+Q25. Find the product of all elements in a list of integers ?
+
+Q26. Merge two lists of integers and remove duplicates ?
+
+Q27. Check if any string in a list starts with a specific prefix ?
+
+Q28. List of employees , having properties id , name , salary . List Top three highest paid employees ?
+
+Q29. Array of numbers, find second highest number from the array ?
+
+Q30. How to sort a map by its values using streams api ?
+
+Q31. Find the employee with the second highest salary from a list of Employee objects ?
+
+Q32. Find the employee with the third highest salary from a list of Employee objects ?
+
+Q33. Remove consecutive duplicate elements from a list of integers ?
+
+Q34. Merge two arrays, sort them, and find the distinct elements using Java 8?
+
+Q35. How can we check if a given string is a palindrome using Java 8 Streams, without explicitly reversing the string ?
+
+Q36. Using Java 8 Streams, how do you find the third longest word in a list without manually sorting it and looping through ?
