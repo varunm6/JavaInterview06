@@ -1,0 +1,110 @@
+Introduction to Java Language and it's features || Java | Code Decode	https://www.youtube.com/watch?v=OsqaAq0W6oY&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=1
+Difference between JDK, JRE and JVM || JVM, JDK and  JRE Java 8 | Code Decode	https://www.youtube.com/watch?v=d6bi2DXJt_0&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=2
+Workspace setup, Hello World Program in Java || Java 8	https://www.youtube.com/watch?v=2rU5YvYZxS8&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=3
+Objects and Classes in Java | Code Decode	https://www.youtube.com/watch?v=XMB0CrfEHdM&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=4
+Constructors in Java || Types of Constructors in Java || Java Constructor tutorial | Code Decode	https://www.youtube.com/watch?v=uCKtRcXYsFM&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=5
+Variables in Java Part-1 || Java 8	https://www.youtube.com/watch?v=-C8YsVhMLhQ&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=6
+Types of variables in Java - Theory - Part 1 | Code Decode	https://www.youtube.com/watch?v=GqcxCvPk3mg&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=7
+Instance variables in Java (Types of variables - Part 2) | Code Decode	https://www.youtube.com/watch?v=3QjWqGa9i6I&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=8
+Local Variables in Java  (Types of variables - Part 3) | Code Decode	https://www.youtube.com/watch?v=bjTAnpXO2LA&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=9
+Static Variables in Java || Java Interview Questions and Answers | Code Decode	https://www.youtube.com/watch?v=7k9mNoCwZqI&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=10
+Inheritance in Java || Java Inheritance || Types of Inheritance in Java	https://www.youtube.com/watch?v=NX7avxCicI4&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=11
+Inheritance and it's type in Java with Examples || Inheritance in Java [LIVE DEMO] | Code Decode	https://www.youtube.com/watch?v=ltZZugUuiZg&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=12
+Association(HAS-A) Aggregation And Composition in Java [MOST COMMONLY ASKED INTERVIEW QUESTION]	https://www.youtube.com/watch?v=wbvW3w47QRw&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=13
+Encapsulation in Java-theory | Code Decode	https://www.youtube.com/watch?v=ZSD9ZsuNKJs&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=14
+Encapsulation in Java with Example || Java Encapsulation explained with Implementation	https://www.youtube.com/watch?v=KkRn67klEIw&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=15
+Polymorphism in Java - Concept | Compile time and Runtime | Overloading and Overriding | Code Decode	https://www.youtube.com/watch?v=wNc00u-3EYI&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=16
+Static polymorphism in Java with example || Compile time polymorphism in Java [MOST IMP CONCEPT]	https://www.youtube.com/watch?v=msnpR4xcflc&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=17
+Type promotions in Java || Method overloading with type promotion [IMP Interview Concept]	https://www.youtube.com/watch?v=mrh9jBYsEpU&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=18
+Overriding in java with Example | Code Decode	https://www.youtube.com/watch?v=PhrrlPLqf4I&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=19
+Upcasting in java with Example | Upcasting [Common Core Java Interview Question] | Code Decode	https://www.youtube.com/watch?v=JFA9Svq4PFw&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=20
+Dynamic Polymorphism by example	https://www.youtube.com/watch?v=4oEgPfu-4fY&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=21
+Can we implement dynamic polymorphism with instance variables or data members | Code Decode	https://www.youtube.com/watch?v=Xa6oGWOyF3I&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=22
+Covariant return types in Java [ MOST TRICKY CORE JAVA INTERVIEW QUESTION ] | Code Decode	https://www.youtube.com/watch?v=wFvvCG0foxw&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=23
+Abstraction in Java || Abstract Classes and Methods Frequently asked Interview Question| Code Decode	https://www.youtube.com/watch?v=szSlkGB-O7Y&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=24
+Java 8 new feature -  Default methods | Code Decode	https://www.youtube.com/watch?v=n5NZkN74vns&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=25
+Multiple Inheritance in Java with example | Diamond Inheritance [MOST IMPORTANT CONCEPT]	https://www.youtube.com/watch?v=s714vbKp6-w&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=26
+Why default method in Java 8 || Default method || (Most Asked  Interview Question) | Code Decode	https://www.youtube.com/watch?v=XhNeSRx0lH4&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=27
+Diamond/Ambiguity problem of multiple inheritance due to Default methods in Java 8 [ SOLVED !! ]	https://www.youtube.com/watch?v=0pCyqDAGafY&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=28
+Static Method in Interface Java 8 | Code Decode [MOST IMPORTANT CORE JAVA INTERVIEW QUESTION]	https://www.youtube.com/watch?v=G6U0h7MvR-k&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=29
+Shadowing variable in Java | Common Core Java Interview Question | Data shadowing | Code Decode	https://www.youtube.com/watch?v=8JTqOnVyQyY&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=30
+Access Modifiers in Java - Theory |  Public, Protected, Private, Default [Explained with animation]	https://www.youtube.com/watch?v=ic6A75i1IRQ&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=31
+Access Modifiers in java by Example [Most Basic Java Interview Question !!] | Code Decode	https://www.youtube.com/watch?v=O5nKEJnGR3M&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=32
+Can we restrict visibility of derived method in Java ? ||  visibility control in java	https://www.youtube.com/watch?v=jdKK6p3gvPg&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=33
+Java is pass/call by value or pass/call by reference [MOST IMP. JAVA INTERVIEW QUESTION]| ode Decode	https://www.youtube.com/watch?v=w4sGl3HxgZw&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=34
+Equals and Hashcode Contract in Java [Important Java Interview Question] | Code Decode	https://www.youtube.com/watch?v=4X5Kgi2VltI&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=35
+Why comparable and comparator is needed || Need of Comparable and Comparator in Java	https://www.youtube.com/watch?v=-MQieYxw2nc&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=36
+Comparable and Comparator Implementation in Java with Example [Interview Question]	https://www.youtube.com/watch?v=b-KccmQYvlM&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=37
+Comparable and Comparator Implementation in Java with Example [Interview Question]	https://www.youtube.com/watch?v=b-KccmQYvlM&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=38
+Comparable and Comparator Implementation in Java with Example [Interview Question]	https://www.youtube.com/watch?v=b-KccmQYvlM&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=39
+Comparable VS Comparator || Comparable and Comparator [Most Asked Interview Question]	https://www.youtube.com/watch?v=Qn0uk50gMUM&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=40
+Git and GitHub Tutorial ||  Git Architecture || Git Crash Course || Professional Git | Code Decode	https://www.youtube.com/watch?v=N05ksTiyu8w&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=41
+Top Core Java Interview Questions || Core Java Interview Questions and Answers [MOST ASKED]	https://www.youtube.com/watch?v=PwiuAebCruY&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=42
+Java collections framework interview questions and Answers | MOST ASKED | Core Java | Code Decode	https://www.youtube.com/watch?v=KfoNYoVUBJI&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=43
+Java Design Pattern Interview Questions and Answers [ MOST ASKED DESIGN PATTERN INTERVIEW QUESTIONS]	https://www.youtube.com/watch?v=JFvSCobD7JU&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=44
+Java Design Pattern Interview Questions & Answers || Proxy & Flyweight Design Pattern [Live Demo]	https://www.youtube.com/watch?v=QfnZGam76kE&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=45
+Exception Handling Interview questions and answers in Java | Part -1 | Code Decode	https://www.youtube.com/watch?v=gXctfxRV-gY&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=46
+Spring Boot Interview Questions and Answer | Most asked / Tricky Interview Questions | Code Decode	https://www.youtube.com/watch?v=1vg1Qg6cugc&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=47
+Spring Boot Interview Questions And Answer | Spring Boot Interview Question Part 2 | Code Decode	https://www.youtube.com/watch?v=RZNV9hi7a8w&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=48
+Project Lombok tutorial in Spring Boot with example | Java | Spring MVC | [Live Demo] | Code Decode	https://www.youtube.com/watch?v=7Ven3G_-GqI&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=49
+Hibernate Interview Questions and Answers in Java with examples PART -1[ MOST ASKED] Code Decode	https://www.youtube.com/watch?v=B-Z-urB01NE&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=50
+Hibernate Interview Questions and Answers in Java PART 2 [ MOST ASKED WITH LIVE CODE DEMO]	https://www.youtube.com/watch?v=b3drcKdA2zg&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=51
+Two Sum Leetcode Interview Question part -1 | Most asked Java Coding Interview Questions and Answers	https://www.youtube.com/watch?v=sZhIlkGX6T8&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=52
+Two Sum with Hash Map || Most asked Java Coding Interview Questions and Answers	https://www.youtube.com/watch?v=Nz6g92KerSo&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=53
+Best time to buy and sell Stock in Java || Java coding Interview Question with solution [MOST ASKED]	https://www.youtube.com/watch?v=Sh9FhCZJAoU&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=54
+Garbage Collection Interview Questions and Answers in Java | With Live Demo | Code Decode	https://www.youtube.com/watch?v=EeRFOVMf7rE&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=55
+Garbage Collection Interview Questions and Answers in Java - Part 2 | Fresher + Exp (With Live Demo)	https://www.youtube.com/watch?v=bu12JCTeWOo&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=56
+Java 8 new features || Java 8 Interview Questions and Answers ( Live Demo with Examples )	https://www.youtube.com/watch?v=oUdENE7ljjw&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=57
+Java 8 New Features Interview Questions And Answers( Live Demo) Part 2 | Code Decode	https://www.youtube.com/watch?v=bxtNFqldAuk&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=58
+Java 8 Predicate, Function, Chaining, Predicate Joining interview questions (Live Demo) Code Decode	https://www.youtube.com/watch?v=3b8I4rzqF0c&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=59
+Java 8 Interview Questions And Answers | Consumer || BiConsumer || Supplier || Chaining  (Live Demo)	https://www.youtube.com/watch?v=7-ALyd6OAaQ&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=60
+Top Java 8 Streams API Interview Questions and Answers | Parallel Stream | Code Decode	https://www.youtube.com/watch?v=J-RTlluJv7E&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=61
+Parallel Streams intro || Stream processing Interview Questions and Answers Java 8 | Code Decode	https://www.youtube.com/watch?v=cqQN8g4oR98&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=62
+Spring Boot CRUD Example  ||  Hibernate(JPA) + MySql || Spring Boot Interview Questions (Live Demo)	https://www.youtube.com/watch?v=MVMEdF_d6S4&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=63
+Spring Boot CRUD best practice with Annotations || Hibernate + MySQL || Live Demo	https://www.youtube.com/watch?v=w9c4vz-QprI&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=64
+Custom Exception Handling in Spring Boot | Spring Boot Interview Questions | Code Decode | Live Demo	https://www.youtube.com/watch?v=WH_d9Tw4CPs&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=65
+Git Interview Questions and Answers with Live Demo|| Git and Github || Github SSH Key  | Code Decode	https://www.youtube.com/watch?v=YRBdMEFikTQ&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=66
+Most Asked Multithreading Interview Questions and Answers in Java | Code Decode	https://www.youtube.com/watch?v=bHU4gDsDHLA&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=67
+Java Multithreading Interview Questions and Answers || Daemon Thread in java || Part 2 (Live Demo)	https://www.youtube.com/watch?v=tLF1wYZs4Bk&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=68
+Java Interview Questions and Answers for Fresher and Experienced [MOST ASKED ] Code Decode	https://www.youtube.com/watch?v=wpFtPQLG9Vs&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=69
+Top Tricky Java Interview Questions and Answers | Java Interview Questions and Answers | Code Decode	https://www.youtube.com/watch?v=PSAT-ORaQ-s&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=70
+Stack and Queue Implementation in Java | Java Interview Question and Answers | DS & Algo series EP-1	https://www.youtube.com/watch?v=3F5kq-4jxPI&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=71
+Binary Tree and its Types using Recursion | Data Structure | Inorder Preorder Postorder Levelorder	https://www.youtube.com/watch?v=rxYCRxKCZSY&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=72
+Most Asked Tricky Core Java Interview Questions and Answers for Fresher and Experienced |Code Decode	https://www.youtube.com/watch?v=YAOFbdDbjNY&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=73
+How to Break Singleton Design pattern in Java || Java Interview Questions and Answers | Code Decode	https://www.youtube.com/watch?v=dQV6BeAlBvI&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=74
+Tricky Core Java Interview Questions and Answers for freshers and experienced | Code Decode	https://www.youtube.com/watch?v=ZI6Et1bVen0&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=75
+Concurrent Collection Interview questions and Answers for experienced and freshers | Code Decode	https://www.youtube.com/watch?v=bJT634zMbAM&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=76
+Java Tricky Concurrent Collection Interview Questions and Answers | Part 2 | Code Decode	https://www.youtube.com/watch?v=uQLAToNIlNE&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=77
+Internal Working and implementation of hashmap and hashset | Java Interview Questions | Code Decode	https://www.youtube.com/watch?v=7k0VYHuUF6g&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=78
+Java String interview Questions and Answers with example| Immutable | Most Asked | Code Decode	https://www.youtube.com/watch?v=i-OZbcvneqo&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=79
+Java String interview Questions and Answers with example| Immutable | Most Asked | Code Decode	https://www.youtube.com/watch?v=i-OZbcvneqo&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=80
+Program to Find Duplicate character in a String Coding Interview Question and Answer | Code Decode	https://www.youtube.com/watch?v=VUXvBxtuTT8&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=81
+Most Common Core Java String Coding Interview Question | Leetcode| String Rotation |Code Decode	https://www.youtube.com/watch?v=66RR_-NOZEk&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=82
+Java Interview Questions and Answers for 3 to 10 years of  Experienced Developers|Part-1|Code Decode	https://www.youtube.com/watch?v=FePI2qUjI6Y&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=83
+Java 8 Stream Collectors groupingBy Example | Java 8 coding Interview Questions & Answer|Code Decode	https://www.youtube.com/watch?v=PMhrMDHFFW4&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=84
+Java 8 Coding Interview Questions and Answers| Min Max Average & Sum | Most Important | Code Decode	https://www.youtube.com/watch?v=b4Atxh-a97M&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=85
+Find Duplicate Elements from list using Java 8 | Java 8 coding Interview Questions | Code Decode	https://www.youtube.com/watch?v=aaokKp87Hoc&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=86
+Java 8 Interview Questions and Answers | Scenario Based | Code Decode | Programs for Experienced	https://www.youtube.com/watch?v=S0hOCaF6_3k&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=87
+Master Java 8 Optional with Examples : Top Interview Questions & Answers | Part 1 | Code Decode	https://www.youtube.com/watch?v=3BSrJDI-nLQ&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=88
+Java 8 Programming/Coding interview Question and Answers with Sort Limit and Skip | Code Decode	https://www.youtube.com/watch?v=FR1oQzBIKJ4&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=89
+Java 8 Short Circuit operation Stream with Demo| Coding Interview Questions and Answers |Code Decode	https://www.youtube.com/watch?v=ZnGToO5fL20&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=90
+Differences between Arraylist vs Linkedlist Java Interview Questions | Vector vs Array | Code Decode	https://www.youtube.com/watch?v=NIv6hqPMnFA&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=91
+Java Coding Interview Questions and Answers | Sorting using comparator | Code Decode | [Most Common]	https://www.youtube.com/watch?v=HFQAPW8SMBM&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=92
+Exception handling Interview Questions and Answers in Java | Code Decode | Live Demo | Part 2	https://www.youtube.com/watch?v=RS8oyAJHl2M&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=93
+Rest/Restful Api Interview Questions and Answers | Part 2| Swagger Spring boot tutorial |Code Decode	https://www.youtube.com/watch?v=77_Zx-7ybRo&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=94
+Microservices Asynchronous synchronous Design Interview Questions and Answers| Part -4 | Code Decode	https://www.youtube.com/watch?v=CUBr1D9d9EY&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=95
+Double checked Locking in Singleton Design pattern | Java Interview Questions | Code Decode	https://www.youtube.com/watch?v=p4UbfBRpke0&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=96
+Serialization VS Externalization | Serialization vulnerabilities | Code Decode	https://www.youtube.com/watch?v=Eo3mtkiB2-0&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=97
+Master Strategy Design Pattern in Spring Boot | Interview-Ready Guide with Answers | Code Decode	https://www.youtube.com/watch?v=_KWqM3HcCHE&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=98
+What is CORS In Spring boot | CORS Policy | CORS Interview Questions and Answer | Code Decode |	https://www.youtube.com/watch?v=pgkZh8e_HKw&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=99
+Saga Design pattern Spring Boot Microservices Interview Questions and Answers | Code Decode	https://www.youtube.com/watch?v=Fe_qPM81hJ8&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=100
+How to Reverse a LinkedList in Java | Data Structure and algorithm | Leetcode 206 | Code Decode	https://www.youtube.com/watch?v=y6uCk_Kwe74&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=101
+Most wrongly answered Question Spring boot | Spring boot profiles Interview Questions | Code Decode	https://www.youtube.com/watch?v=-NQfkPOcvQw&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=102
+Most asked docker commands to Java Developer | Interview Questions | Experienced | Code Decode	https://www.youtube.com/watch?v=fwtVq7yEkzo&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=103
+Spring boot Interview Questions and Answers for 3+ years of Experience in 2023 | Code Decode	https://www.youtube.com/watch?v=cepbrLI0N20&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=104
+Top TCS Java Interview Questions and Answers for freshers and Experienced | Code Decode	https://www.youtube.com/watch?v=i7Gnlu_IyTM&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=105
+Donât Go to Your First Java Interview Without Watching This! | Questions & Answers | Code Decode	https://www.youtube.com/watch?v=G5a91WqNytI&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=106
+Most asked Java Interview Questions for 8 years of Experienced Developer canditate | Code Decode	https://www.youtube.com/watch?v=tI0pXHvG7gs&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=107
+Java 23 features | What's new in Java 23 |Interview Questions and Answers | Code Decode	https://www.youtube.com/watch?v=qhIkqUC1tXQ&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=108
+Java 17 new features with examples | Java 17 Interview Questions and Answers | Code Decode	https://www.youtube.com/watch?v=HzzYTgkaWv4&list=PLyHJZXNdCXsdWEXkvki9SyWNMcChAl8su&index=109
+5 Null Handling Techniques Every Developer MUST Know | Best Co
