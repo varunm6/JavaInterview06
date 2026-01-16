@@ -1,3 +1,13 @@
+Coding qns:https://youtu.be/HLu8Gb7h6uY
+Microservices::
+https://youtu.be/yn_stY3HCr8
+https://youtu.be/BLlEgtp2_i8
+https://youtu.be/EeQRAxXWDF4
+
+Kafka:https://youtu.be/c7LPlWvxZcQ
+
+DBMS:https://youtu.be/scxc0FXp2rg
+
 https://youtu.be/1US2bWVvNm0?si=ZTFNO-EjtbGuqoPa
 
 https://youtu.be/lULU7F5Cylo
