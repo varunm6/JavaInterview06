@@ -1,4 +1,5 @@
 sql: https://youtu.be/Lb3vfuew7Gk
+https://youtu.be/nYmoQ4r0DVw
 
 Coding qns:https://youtu.be/HLu8Gb7h6uY
 Microservices::
