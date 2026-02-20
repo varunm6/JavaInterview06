@@ -1,3 +1,6 @@
+test: https://youtu.be/UbbEBUg-3XU
+jpa: https://youtu.be/8SxJNqeq_zc
+
 grpc: https://youtu.be/UbbEBUg-3XU
 dsa patters
 https://youtu.be/KsSJ_Qrj5sc
