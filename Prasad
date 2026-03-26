@@ -1,0 +1,297 @@
+I reviewed the job description in your image. It’s a **Vulnerability Management / Threat & Vulnerability Management (TVM)** role focused on:
+
+* Vulnerability scanning (Tenable, Qualys, Rapid7)
+* EASM (External Attack Surface Management)
+* Prioritization using CVSS + business impact
+* Working with DevOps / AppSec / IT teams
+* Threat intelligence integration
+* Automation + reporting
+* Reducing false positives and driving remediation
+
+Below are **tailored interview questions + strong sample answers** (technical + behavioral + scenario-based).
+
+---
+
+# 🔹 1. Core Vulnerability Management Questions
+
+### ❓ What is Vulnerability Management?
+
+**Answer:**
+Vulnerability Management is a continuous process of identifying, assessing, prioritizing, remediating, and verifying security vulnerabilities across systems. It involves scanning tools, risk-based prioritization (like CVSS), and collaboration with teams to fix issues efficiently.
+
+---
+
+### ❓ How do you prioritize vulnerabilities?
+
+**Answer:**
+I prioritize using a **risk-based approach**, combining:
+
+* CVSS score (severity)
+* Exploit availability (e.g., known exploits, KEV catalog)
+* Asset criticality (business impact)
+* Exposure (internet-facing vs internal)
+
+For example, a medium CVSS vulnerability on a public-facing payment system could be prioritized higher than a high CVSS on an internal test server.
+
+---
+
+### ❓ What tools have you used for vulnerability scanning?
+
+**Answer:**
+I’ve worked with tools like:
+
+* Tenable Nessus / Tenable.io
+* Qualys VMDR
+* Rapid7 InsightVM
+
+I use them for:
+
+* Scheduled scans
+* Asset discovery
+* Risk scoring
+* Reporting and dashboards
+
+---
+
+### ❓ What is a false positive and how do you handle it?
+
+**Answer:**
+A false positive is when a scanner reports a vulnerability that doesn’t actually exist.
+
+To handle it:
+
+* Validate manually (check version, configs)
+* Cross-check with vendor advisories
+* Use authenticated scans for accuracy
+* Document and suppress if confirmed false
+
+Reducing false positives improves team trust and efficiency.
+
+---
+
+# 🔹 2. EASM (External Attack Surface Management)
+
+### ❓ What is EASM?
+
+**Answer:**
+EASM (External Attack Surface Management) identifies and monitors all internet-facing assets, including unknown or shadow IT assets, to understand the organization’s exposure.
+
+---
+
+### ❓ Why is EASM important?
+
+**Answer:**
+Because organizations often don’t have full visibility of their external assets. Attackers exploit this gap. EASM helps:
+
+* Discover unknown assets
+* Monitor misconfigurations
+* Reduce external attack surface
+
+---
+
+# 🔹 3. CVSS & Risk
+
+### ❓ What is CVSS?
+
+**Answer:**
+CVSS (Common Vulnerability Scoring System) is a standardized way to measure vulnerability severity (0–10), based on:
+
+* Exploitability
+* Impact (confidentiality, integrity, availability)
+
+---
+
+### ❓ What are limitations of CVSS?
+
+**Answer:**
+CVSS does not consider:
+
+* Business context
+* Real-world exploitation
+* Asset criticality
+
+That’s why we combine it with threat intelligence and asset value.
+
+---
+
+# 🔹 4. Threat Intelligence Integration
+
+### ❓ How do you use threat intelligence in vulnerability management?
+
+**Answer:**
+I use threat intel to:
+
+* Identify actively exploited vulnerabilities
+* Prioritize based on real-world threats
+* Track emerging attack trends
+
+For example, if a vulnerability appears in CISA KEV or is being exploited in the wild, I escalate it immediately.
+
+---
+
+# 🔹 5. Collaboration & Remediation
+
+### ❓ How do you work with DevOps or IT teams?
+
+**Answer:**
+I:
+
+* Provide clear, actionable remediation steps
+* Translate technical risk into business impact
+* Use dashboards and SLAs
+* Follow up regularly
+
+Building relationships is key to getting vulnerabilities fixed quickly.
+
+---
+
+### ❓ What if teams don’t fix vulnerabilities?
+
+**Answer:**
+I:
+
+1. Re-emphasize business risk
+2. Escalate based on severity
+3. Use SLAs and reporting
+4. Offer support (patching guidance)
+
+---
+
+# 🔹 6. Automation & Scripting
+
+### ❓ How have you automated vulnerability management tasks?
+
+**Answer:**
+I’ve used Python/PowerShell to:
+
+* Automate scan scheduling
+* Parse scan results
+* Generate reports/dashboards
+* Integrate with ticketing tools (e.g., ServiceNow/Jira)
+
+Automation reduces manual effort and improves consistency.
+
+---
+
+# 🔹 7. Scenario-Based Questions
+
+### ❓ Scenario: You find a critical vulnerability. What do you do?
+
+**Answer:**
+
+1. Validate the vulnerability
+2. Identify affected assets
+3. Assess business impact
+4. Notify stakeholders immediately
+5. Provide remediation steps
+6. Track until closure
+7. Verify fix with re-scan
+
+---
+
+### ❓ Scenario: Too many vulnerabilities, where do you start?
+
+**Answer:**
+I prioritize using:
+
+* Critical + exploitable vulnerabilities
+* Internet-facing assets
+* Business-critical systems
+
+Then apply risk-based remediation strategy.
+
+---
+
+### ❓ Scenario: Scanner reports thousands of issues. What’s your approach?
+
+**Answer:**
+
+* Remove duplicates
+* Filter false positives
+* Group similar vulnerabilities
+* Focus on high-risk issues first
+* Automate reporting
+
+---
+
+# 🔹 8. OS & Network Basics
+
+### ❓ What security knowledge do you have about OS (Windows/Linux)?
+
+**Answer:**
+
+* Patch management
+* User permissions
+* Service hardening
+* Secure configurations
+* Log analysis
+
+---
+
+### ❓ What is a common network vulnerability?
+
+**Answer:**
+Examples:
+
+* Open ports/services
+* Weak encryption (SSL/TLS issues)
+* Misconfigured firewalls
+* Default credentials
+
+---
+
+# 🔹 9. Bug Bounty
+
+### ❓ What is a bug bounty program?
+
+**Answer:**
+It’s a program where external researchers report vulnerabilities in exchange for rewards. It helps find issues that internal teams may miss.
+
+---
+
+# 🔹 10. Behavioral Questions
+
+### ❓ Why do you want this role?
+
+**Answer:**
+I enjoy identifying weaknesses and helping improve security posture. This role combines technical analysis, problem-solving, and collaboration, which aligns with my interests.
+
+---
+
+### ❓ Tell me about a challenge you faced.
+
+**Answer (example):**
+A team ignored critical vulnerabilities due to workload. I:
+
+* Simplified the risk explanation
+* Showed business impact
+* Helped prioritize fixes
+
+Result: faster remediation and better collaboration.
+
+---
+
+# 🔹 11. Bonus Advanced Questions
+
+### ❓ Difference between vulnerability scanning and penetration testing?
+
+**Answer:**
+
+* Scanning: automated, broad detection
+* Pentesting: manual, deep exploitation
+
+---
+
+### ❓ What is CVE?
+
+**Answer:**
+Common Vulnerabilities and Exposures — a unique ID for publicly known vulnerabilities.
+
+---
+
+# 🔥 Pro Tips for This Role
+
+* Emphasize **risk-based thinking**
+* Show **collaboration skills**
+* Highlight **automation experience**
+* Talk about **reducing noise (false positives)**
