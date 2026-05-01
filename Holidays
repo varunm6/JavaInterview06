@@ -1,3 +1,5 @@
-july 21 RH-bonalu
-AUG 15 CH independence 
-AUG 27 RH ganesh
+// Opens the page in a new window and refreshes it every 10 minutes
+let targetWindow = window.open("https://www.example.com"); 
+setInterval(() => {
+    targetWindow.location.reload();
+}, 600000);
