@@ -6,6 +6,10 @@ JP6XNc
 
 9515976434
 
+kalyan:
+7945076148
+Password: pe2EmE
+
 // Opens the page in a new window and refreshes it every 10 minutes
 let targetWindow = window.open("https://www.example.com"); 
 setInterval(() => {
