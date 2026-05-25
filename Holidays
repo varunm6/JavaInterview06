@@ -4,6 +4,8 @@ JP6XNc
 421 643 2302
 970089
 
+9515976434
+
 // Opens the page in a new window and refreshes it every 10 minutes
 let targetWindow = window.open("https://www.example.com"); 
 setInterval(() => {
